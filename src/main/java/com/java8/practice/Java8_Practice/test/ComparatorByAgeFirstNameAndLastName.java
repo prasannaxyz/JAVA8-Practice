@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 import com.google.common.collect.Lists;
 import com.java8.practice.Java8_Practice.vo.Employee;
 
-public class VerifyComparator {
+/*Comparator thenComparing() example*/
+public class ComparatorByAgeFirstNameAndLastName {
 	
 	public static void main(String[] args) {
 		Comparator<Employee> compareByAge = (Employee o1, Employee o2) -> o1.getAge().compareTo(o2.getAge());
