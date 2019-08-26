@@ -1,5 +1,7 @@
 package com.java8.practice.Java8_Practice.test;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +23,8 @@ public class ComparatorByAgeFirstNameAndLastName {
 				.compareTo(o2.getLastName());
 		Comparator<Employee> compareCompositeFields = compareByAge.thenComparing(compareByFirstName)
 				.thenComparing(compareByLastName);
+		/*List<Employee> employees = getEmployees();
+		Collections.sort(employees,compareCompositeFields);*/
 		List<Employee> employees = getEmployees().stream().sorted(compareCompositeFields).collect(Collectors.toList());
 		System.out.println(employees);
 		if (CollectionUtils.isNotEmpty(employees)) {
