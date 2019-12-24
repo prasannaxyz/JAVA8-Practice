@@ -12,6 +12,10 @@ import com.java8.practice.Java8_Practice.vo.Vendor;
 
 public class ConvertListToMap {
 	public static void main(String[] args) {
+		prepareVendorMap();
+	}
+
+	private static void prepareVendorMap() {
 		Map<Integer, Vendor> vendorMap = Maps.newHashMap();
 		List<Vendor> vendorList = getVendors();
 		if (CollectionUtils.isNotEmpty(vendorList)) {
