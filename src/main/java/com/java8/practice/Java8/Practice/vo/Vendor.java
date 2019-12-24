@@ -1,10 +1,13 @@
-package com.java8.practice.Java8_Practice.vo;
+package com.java8.practice.Java8.Practice.vo;
+
+import java.util.List;
 
 public class Vendor implements Comparable<Vendor> {
 	private Integer id;
 	private String firstName;
 	private String lastName;
 	private Integer age;
+	private List<Customer> customers;
 
 	public Vendor(Integer id, String firstName, String lastName, Integer age) {
 		this.id = id;
@@ -43,6 +46,14 @@ public class Vendor implements Comparable<Vendor> {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	public List<Customer> getCustomers() {
+		return customers;
+	}
+
+	public void setCustomers(List<Customer> customers) {
+		this.customers = customers;
 	}
 
 	@Override

@@ -1,10 +1,10 @@
-package com.java8.practice.Java8_Practice.test;
+package com.java8.practice.Java8.Practice.test;
 
 import java.util.Collections;
 import java.util.List;
 
 import com.google.common.collect.Lists;
-import com.java8.practice.Java8_Practice.vo.Vendor;
+import com.java8.practice.Java8.Practice.vo.Vendor;
 
 public class ComparableEg {
 

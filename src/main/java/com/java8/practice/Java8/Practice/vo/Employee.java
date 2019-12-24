@@ -1,4 +1,4 @@
-package com.java8.practice.Java8_Practice.vo;
+package com.java8.practice.Java8.Practice.vo;
 
 public class Employee {
 	private Integer id;

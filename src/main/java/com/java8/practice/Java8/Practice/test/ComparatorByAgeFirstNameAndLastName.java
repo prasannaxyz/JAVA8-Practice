@@ -1,4 +1,4 @@
-package com.java8.practice.Java8_Practice.test;
+package com.java8.practice.Java8.Practice.test;
 
 import java.util.Comparator;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import org.apache.commons.collections.CollectionUtils;
 
 import com.google.common.collect.Lists;
-import com.java8.practice.Java8_Practice.vo.Employee;
+import com.java8.practice.Java8.Practice.vo.Employee;
 
 /*Comparator thenComparing(), Calculating max and min examples*/
 public class ComparatorByAgeFirstNameAndLastName {
