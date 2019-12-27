@@ -19,9 +19,9 @@ public class OrElseThrow {
 	}
 
 	private static void eligibleForVote(Date dob) {
-		int age=Optional.ofNullable(dob).map(dateOfBirth -> getYears(dateOfBirth))
+		int age = Optional.ofNullable(dob).map(dateOfBirth -> getYears(dateOfBirth))
 				.filter(years -> Objects.nonNull(years) && years > 18)
-				.orElseThrow(() -> AgeNotSupported.ageNotSupported("You are not eligible for voting."));
+				.orElseThrow(() -> ageNotSupported("You are not eligible for voting."));
 		System.out.println(age);
 
 	}
@@ -34,11 +34,8 @@ public class OrElseThrow {
 		return today.get(Calendar.YEAR) - dobCalendar.get(Calendar.YEAR);
 
 	}
-}
 
-class AgeNotSupported extends RuntimeException {
 	public static RuntimeException ageNotSupported(String message) {
 		return new RuntimeException(message);
 	}
-
 }
