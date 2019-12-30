@@ -12,7 +12,7 @@ public class OrElseThrow {
 
 	public static void main(String[] args) throws ParseException {
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
 		String dateInString = "23-08-2005 10:20:56";
 		Date dob = sdf.parse(dateInString);
 		eligibleForVote(dob);
