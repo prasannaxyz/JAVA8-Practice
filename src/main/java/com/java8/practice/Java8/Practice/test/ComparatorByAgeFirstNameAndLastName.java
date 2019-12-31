@@ -21,12 +21,15 @@ public class ComparatorByAgeFirstNameAndLastName {
 				.compareTo(o2.getLastName());
 		Comparator<Employee> compareCompositeFields = compareByAge.thenComparing(compareByFirstName)
 				.thenComparing(compareByLastName);
-		/*List<Employee> employees = getEmployees();
-		Collections.sort(employees,compareCompositeFields);*/
-		List<Employee> employees = getEmployees().stream().sorted(compareCompositeFields).collect(Collectors.toList());
-		System.out.println(employees);
+		Comparator<Employee> comparatorByAge = Comparator.comparing(Employee::getAge,
+				Comparator.nullsLast(Comparator.naturalOrder()));
+		List<Employee> employees = getEmployees().stream().sorted(comparatorByAge).collect(Collectors.toList());
+		/*Collections.sort(employees, compareCompositeFields);
+
+		List<Employee> employees = getEmployees().stream().sorted(compareCompositeFields).collect(Collectors.toList());*/
 		if (CollectionUtils.isNotEmpty(employees)) {
-			Comparator<Employee> comparatorByAge = Comparator.comparing(Employee::getAge);
+			
+			System.out.println(employees);
 			Optional<Employee> minAgeEmployee = employees.stream().min(comparatorByAge);
 			Optional<Employee> maxAgeEmployee = employees.stream().max(comparatorByAge);
 
